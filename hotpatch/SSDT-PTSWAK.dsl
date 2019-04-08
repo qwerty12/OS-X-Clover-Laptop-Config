@@ -5,7 +5,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 {
 #endif
     External(ZPTS, MethodObj)
-    External(ZWAK, MethodObj)
+    External(XWAK, MethodObj)
 
     External(_SB.PCI0.PEG0.PEGP._ON, MethodObj)
     External(_SB.PCI0.PEG0.PEGP._OFF, MethodObj)
@@ -21,7 +21,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 
     // In DSDT, native _PTS and _WAK are renamed ZPTS/ZWAK
     // As a result, calls to these methods land here.
-    Method(_PTS, 1)
+    /*Method(_PTS, 1)
     {
         if (5 == Arg0)
         {
@@ -63,7 +63,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
             // XHC.PMEE fix, if enabled
             If (CondRefOf(\RMCF.XPEE)) { If (\RMCF.XPEE && CondRefOf(\_SB.PCI0.XHC.PMEE)) { \_SB.PCI0.XHC.PMEE = 0 } }
         }
-    }
+    }*/
     Method(_WAK, 1)
     {
         // Take care of bug regarding Arg0 in certain versions of OS X...
@@ -71,7 +71,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
         If (Arg0 < 1 || Arg0 > 5) { Arg0 = 3 }
 
         // call into original _WAK method
-        Local0 = ZWAK(Arg0)
+        Local0 = XWAK(Arg0)
 
         If (CondRefOf(\RMCF.DPTS))
         {

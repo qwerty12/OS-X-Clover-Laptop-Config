@@ -72,13 +72,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         //
         // 0: no effect during _WAK
         // 1: calls _SI._SST(1) during _WAK when Arg0 == 3 (waking from S3 sleep)
-        Name(SSTF, 0)
+        Name(SSTF, 1)
 
         // AUDL: Audio Layout
         //
         // The value here will be used to inject layout-id for HDEF and HDAU
         // If set to Ones, no audio injection will be done.
-        Name(AUDL, Ones)
+        Name(AUDL, 2)
 
         // DAUD: Digital audio
         //

@@ -5,7 +5,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DEH01", 0)
 {
 #endif
     External(_SB.PCI0.EH01, DeviceObj)
-    External(_SB.PCI0.LPCB, DeviceObj)
+    External(_SB.PCI0.LPC, DeviceObj)
 
     // registers needed for disabling EHC#1
     Scope(_SB.PCI0.EH01)
@@ -16,7 +16,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DEH01", 0)
             PSTE, 2  // bits 2:0 are power state
         }
     }
-    Scope(_SB.PCI0.LPCB)
+    Scope(_SB.PCI0.LPC)
     {
         OperationRegion(RMP1, PCI_Config, 0xF0, 4)
         Field(RMP1, DWordAcc, NoLock, Preserve)
@@ -40,7 +40,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_DEH01", 0)
             // put EHCI#1 in D3hot (sleep mode)
             ^^EH01.PSTE = 3
             // disable EHCI#1 PCI space
-            ^^LPCB.FDE1 = 1
+            ^^LPC.FDE1 = 1
         }
     }
 #ifndef NO_DEFINITIONBLOCK

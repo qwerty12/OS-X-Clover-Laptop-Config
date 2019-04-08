@@ -4,7 +4,7 @@
 DefinitionBlock("", "SSDT", 2, "hack", "_SMBUS", 0)
 {
 #endif
-    Device(_SB.PCI0.SBUS.BUS0)
+    Device(_SB.PCI0.SMBU.BUS0)
     {
         Name(_CID, "smbus")
         Name(_ADR, Zero)
