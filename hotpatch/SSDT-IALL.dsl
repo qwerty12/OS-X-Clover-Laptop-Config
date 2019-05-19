@@ -30,6 +30,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_IALL", 0)
     //#include "SSDT-EH02.dsl"
     //#include "SSDT-XHC.dsl"
     #include "../../../SSDT-XHCPRW.dsl"
+    #include "../../../SSDT-SXHC.dsl"
     #include "../../../Goldfish64/Hackintosh/Lenovo-ThinkPad-T450/SSDTs/SSDT-BATT.dsl"
     #include "../../../Goldfish64/Hackintosh/Lenovo-ThinkPad-T450/SSDTs/SSDT-FNKEY.dsl"
     #include "../../../Snikii/Lenovo-ThinkPad-X240/hotpatch/SSDT-ALC3232.dsl"
