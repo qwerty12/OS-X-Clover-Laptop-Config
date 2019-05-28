@@ -365,7 +365,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 amfi_get_out_of_my_way=1 dart=0 -igfxnohdmi brcmfx-country=#a rtcfx_exclude=56-58 bpr_probedelay=300 bpr_upgradedelay=250 bpr_initialdelay=500 bpr_postresetdelay=500 -v</string>
+		<string>kext-dev-mode=1 amfi_get_out_of_my_way=1 dart=0 -igfxnohdmi brcmfx-country=#a rtcfx_exclude=56-58 -v</string>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
