@@ -21,7 +21,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 
     // In DSDT, native _PTS and _WAK are renamed ZPTS/ZWAK
     // As a result, calls to these methods land here.
-    /*Method(_PTS, 1)
+    Method(_PTS, 1)
     {
         if (5 == Arg0)
         {
@@ -63,7 +63,18 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
             // XHC.PMEE fix, if enabled
             If (CondRefOf(\RMCF.XPEE)) { If (\RMCF.XPEE && CondRefOf(\_SB.PCI0.XHC.PMEE)) { \_SB.PCI0.XHC.PMEE = 0 } }
         }
-    }*/
+
+        If (CondRefOf(\RMCF.SSTF))
+        {
+            If (\RMCF.SSTF)
+            {
+                // call _SI._SST to indicate system sleeping
+                // for more info, read ACPI specification
+                If (3 == Arg0 && CondRefOf(\_SI._SST)) { \_SI._SST(3) }
+            }
+        }
+    }
+
     Method(_WAK, 1)
     {
         // Take care of bug regarding Arg0 in certain versions of OS X...

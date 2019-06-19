@@ -200,6 +200,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Change _WAK to XWAK</string>
 					<key>Disabled</key>
 					<false/>
@@ -381,6 +389,11 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>Audio</key>
+		<dict>
+			<key>ResetHDA</key>
+			<true/>
+		</dict>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
