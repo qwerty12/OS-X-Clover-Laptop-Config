@@ -21,7 +21,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 
     // In DSDT, native _PTS and _WAK are renamed ZPTS/ZWAK
     // As a result, calls to these methods land here.
-    Method(_PTS, 1)
+    Method(_PTS, 1, Serialized)
     {
         if (5 == Arg0)
         {
