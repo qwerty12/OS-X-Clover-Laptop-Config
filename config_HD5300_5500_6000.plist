@@ -86,6 +86,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change Method(ESEL,0,S) to ESEZ, pair with SSDT-ESEL.aml</string>
 					<key>Find</key>
 					<data>RVNFTAg=</data>
@@ -197,14 +205,6 @@
 					<data>X1E2OQ==</data>
 					<key>Replace</key>
 					<data>WFE2OQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS, pair with SSDT-PTSWAK.aml</string>
-					<key>Find</key>
-					<data>X1BUUwE=</data>
-					<key>Replace</key>
-					<data>WlBUUwE=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -330,7 +330,7 @@
 					<key>Find</key>
 					<data>AAhfUFJX</data>
 					<key>Replace</key>
-					<data>AAhRUFJX</data>
+					<data>AAhYUFJX</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
